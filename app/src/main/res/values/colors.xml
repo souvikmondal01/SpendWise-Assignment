@@ -4,4 +4,6 @@
     <color name="white">#FFFFFFFF</color>
     <color name="ghost_white">#FFF9F9F9</color>
     <color name="orange">#FE724C</color>
+    <color name="text_color">#2D2A2A</color>
+    <color name="grey">#AFA9A7</color>
 </resources>
