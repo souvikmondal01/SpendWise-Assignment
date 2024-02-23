@@ -12,7 +12,8 @@
         android:layout_height="72dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@drawable/chicken_biryani" />
 
     <TextView
         android:id="@+id/tv_meal_name"

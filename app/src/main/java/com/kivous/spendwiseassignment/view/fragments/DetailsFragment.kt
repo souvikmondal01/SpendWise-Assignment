@@ -6,13 +6,18 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.kivous.spendwiseassignment.R
+import com.kivous.spendwiseassignment.data.dummy_data.DummyData.mealShops
 import com.kivous.spendwiseassignment.databinding.FragmentDetailsBinding
 import com.kivous.spendwiseassignment.databinding.FragmentHomeBinding
+import com.kivous.spendwiseassignment.view.adapters.MealShopsAdapter
 
 class DetailsFragment : Fragment() {
     private var _binding: FragmentDetailsBinding? = null
     private val binding get() = _binding!!
+
+    private lateinit var adapter: MealShopsAdapter
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
     ): View {
@@ -23,9 +28,15 @@ class DetailsFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.tvDetailsScreen.setOnClickListener {
+        binding.ivBackArrow.setOnClickListener {
             findNavController().navigateUp()
         }
+
+        adapter = MealShopsAdapter(requireContext())
+        binding.recyclerView.adapter = adapter
+        binding.recyclerView.layoutManager = LinearLayoutManager(requireContext())
+        adapter.differ.submitList(mealShops())
+
     }
 
     override fun onDestroy() {

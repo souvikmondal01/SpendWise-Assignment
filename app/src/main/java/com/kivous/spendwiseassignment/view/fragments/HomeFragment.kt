@@ -8,7 +8,7 @@ import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.kivous.spendwiseassignment.R
-import com.kivous.spendwiseassignment.data.dummy_data.DummyData.popularMealData
+import com.kivous.spendwiseassignment.data.dummy_data.DummyData.popularMeals
 import com.kivous.spendwiseassignment.databinding.FragmentHomeBinding
 import com.kivous.spendwiseassignment.view.adapters.PopularMealAdapter
 
@@ -36,7 +36,7 @@ class HomeFragment : Fragment() {
         binding.recyclerView.adapter = adapter
         binding.recyclerView.layoutManager =
             LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
-        adapter.differ.submitList(popularMealData())
+        adapter.differ.submitList(popularMeals())
 
     }
 

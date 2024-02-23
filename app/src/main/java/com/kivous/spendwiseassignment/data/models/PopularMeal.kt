@@ -1,6 +1,4 @@
-package com.kivous.spendwiseassignment.data.model
-
-import android.media.Image
+package com.kivous.spendwiseassignment.data.models
 
 data class PopularMeal(
     val id: Int? = null,

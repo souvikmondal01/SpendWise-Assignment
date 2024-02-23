@@ -5,7 +5,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.AsyncListDiffer
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
-import com.kivous.spendwiseassignment.data.model.PopularMeal
+import com.kivous.spendwiseassignment.data.models.PopularMeal
 import com.kivous.spendwiseassignment.databinding.ListPopularMealBinding
 
 class PopularMealAdapter : RecyclerView.Adapter<PopularMealAdapter.ViewHolder>() {
